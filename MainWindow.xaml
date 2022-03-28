@@ -1,0 +1,16 @@
+﻿<Window x:Class="Funcionários.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Funcionários"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button AutomationProperties.Name="btnEdit" Content="Editar" HorizontalAlignment="Left" Margin="90,375,0,0" VerticalAlignment="Top" Height="34" Width="74"/>
+        <Button AutomationProperties.Name="btnDelete" Content="Excluir" HorizontalAlignment="Left" Margin="169,375,0,0" VerticalAlignment="Top" Height="34" Width="74"/>
+        <DataGrid x:Name="dgvTableEmployee" Margin="10,10,184,217" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" />
+        <Button Content="Novo" HorizontalAlignment="Left" Margin="10,375,0,0" VerticalAlignment="Top" Height="34" Width="74" AutomationProperties.Name="btnNew" Click="NewEmployee"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,29 @@
+﻿<Window x:Name="Cadastra_Funcionário" x:Class="Funcionários.CreateEmployee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Funcionários"
+        mc:Ignorable="d"
+        Title="Cadastro de funcionário" WindowStartupLocation="CenterScreen" Topmost="True" HorizontalAlignment="Center" Width="543" Height="324">
+    <Grid AutomationProperties.Name="lblErros" RenderTransformOrigin="0.5,0.5" Height="261" Width="543">
+        <Label x:Name="lblName" Content="Nome:" HorizontalAlignment="Left" Margin="1,1,0,0" VerticalAlignment="Top" Height="30" Width="45"/>
+        <Label x:Name="lblEmail" Content="Email:" HorizontalAlignment="Left" Margin="1,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.496,0.315" Height="30" Width="45"/>
+        <Label x:Name="lblWage" Content="Salário" HorizontalAlignment="Left" Margin="1,106,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.425,1.458" Width="45" Height="30"/>
+        <Label x:Name="lblGender" Content="Sexo:" HorizontalAlignment="Left" Margin="302,1,0,0" VerticalAlignment="Top" Width="45" Height="30"/>
+        <Label x:Name="lblContractType" Content="Tipo de contrato:" HorizontalAlignment="Left" Margin="302,54,0,0" VerticalAlignment="Top" Height="30"/>
+        <Button Content="Salvar" HorizontalAlignment="Left" Margin="471,203,0,0" VerticalAlignment="Top" Width="49" Height="23" AutomationProperties.Name="btnSave" Click="Register"/>
+        <Label x:Name="lblErros" HorizontalAlignment="Left" Margin="1,163,0,0" VerticalAlignment="Top" Background="White" Foreground="Red" Width="465" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" UseLayoutRounding="True"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="1,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="223"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="1,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="223"/>
+        <TextBox x:Name="txtWage" HorizontalAlignment="Left" Margin="1,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Grid Margin="310,31,65,215">
+            <RadioButton x:Name="rbMasc" Content="Masculino" IsChecked="True"/>
+            <RadioButton x:Name="rbFem" Content="Femenino" HorizontalAlignment="Left" Margin="97,0,0,0" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="310,89,0,0">
+            <RadioButton x:Name="rbClt" Content="CLT" HorizontalAlignment="Left" VerticalAlignment="Top" Height="15" Width="38" IsChecked="True"/>
+            <RadioButton x:Name="rbPJ" Content="PJ" HorizontalAlignment="Left" Margin="54,0,0,0" VerticalAlignment="Top"/>
+        </Grid>
+    </Grid>
+</Window>
