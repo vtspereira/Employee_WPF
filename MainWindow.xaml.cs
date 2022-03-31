@@ -1,4 +1,6 @@
 ﻿using Funcionários.Repository;
+using System;
+using System.Data;
 using System.Windows;
 
 namespace Funcionários
@@ -21,7 +23,25 @@ namespace Funcionários
 
         private void NewEmployee(object sender, RoutedEventArgs e)
         {
-            new CreateEmployee(this).Show();
+            new Employee(this).Show();
+        }
+
+        private void Edit(object sender, RoutedEventArgs e)
+        {
+            DataRowView row_selected = dgvTableEmployee.SelectedItem as DataRowView;
+
+            if (row_selected != null)
+                new Employee(this, Convert.ToInt32(row_selected["Id"])).Show();
+        }
+
+        private void Delete(object sender, RoutedEventArgs e)
+        {
+            DataRowView row_selected = dgvTableEmployee.SelectedItem as DataRowView;
+
+            if (row_selected != null)
+                new Employee(this, Convert.ToInt32(row_selected["Id"]), true);
+
+            ShowEmployees();
         }
     }
 }

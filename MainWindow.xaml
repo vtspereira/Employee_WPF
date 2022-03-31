@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button AutomationProperties.Name="btnEdit" Content="Editar" HorizontalAlignment="Left" Margin="90,375,0,0" VerticalAlignment="Top" Height="34" Width="74"/>
-        <Button AutomationProperties.Name="btnDelete" Content="Excluir" HorizontalAlignment="Left" Margin="169,375,0,0" VerticalAlignment="Top" Height="34" Width="74"/>
-        <DataGrid x:Name="dgvTableEmployee" Margin="10,10,184,217" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" />
+        <Button AutomationProperties.Name="btnEdit" Content="Editar" HorizontalAlignment="Left" Margin="600,375,0,0" VerticalAlignment="Top" Height="34" Width="74" Click="Edit"/>
+        <Button AutomationProperties.Name="btnDelete" Content="Excluir" HorizontalAlignment="Left" Margin="679,375,0,0" VerticalAlignment="Top" Height="34" Width="74" Click="Delete"/>
+        <DataGrid x:Name="dgvTableEmployee" Margin="10,10,47,64" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" CanUserReorderColumns="False" SelectionMode="Single" />
         <Button Content="Novo" HorizontalAlignment="Left" Margin="10,375,0,0" VerticalAlignment="Top" Height="34" Width="74" AutomationProperties.Name="btnNew" Click="NewEmployee"/>
 
     </Grid>
